@@ -74,7 +74,3 @@ The app is built with responsive design using Tailwind CSS breakpoints:
 - `xl`: 1280px and up
 - `2xl`: 1536px and up
 
-## 🙏 Acknowledgments
-
-
-
