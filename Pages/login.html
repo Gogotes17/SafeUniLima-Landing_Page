@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Inicia sesión en SafeUni - Acceso seguro para estudiantes y autoridades de seguridad universitaria"
+    />
+    <title>Iniciar Sesión - SafeUni</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script
+      type="module"
+      async
+      src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fsafeuni3003back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"
+    ></script>
+    <script
+      type="module"
+      defer
+      src="https://static.rocket.new/rocket-shot.js?v=0.0.1"
+    ></script>
+  </head>
+  <body class="bg-surface min-h-screen">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-primary to-secondary py-6 shadow-lg">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="landing_page.html"
+            class="flex items-center gap-3 hover:opacity-90 transition-opacity"
+          >
+            <img
+              src="../Imagenes/Logo SafeUniLima (1).png"
+              alt="Logo SafeUni"
+              class="w-100 h-20 object-contain"
+            />
+          </a>
+
+          <!-- Back to Home Link -->
+          <a
+            href="landing_page.html"
+            class="text-white hover:text-primary-100 transition-colors flex items-center gap-2 font-medium"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              ></path>
+            </svg>
+            <span class="hidden sm:inline">Volver al Inicio</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 md:py-16">
+      <div class="max-w-md mx-auto">
+        <!-- Login Card -->
+        <div class="card-elevated p-8 md:p-10">
+          <!-- Welcome Header -->
+          <div class="text-center mb-8">
+            <div
+              class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-10 h-10 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </div>
+            <h1 class="text-3xl font-heading font-bold text-text-primary mb-2">
+              Bienvenido a SafeUniLima
+            </h1>
+            <p class="text-text-secondary">
+              Ingresa tus credenciales para acceder al sistema
+            </p>
+          </div>
+
+          <!-- Login Form -->
+          <form id="login-form" class="space-y-6" novalidate>
+            <!-- Username/Email Field -->
+            <div>
+              <label
+                for="username"
+                class="block text-sm font-medium text-text-primary mb-2"
+              >
+                Usuario o Correo Institucional *
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <svg
+                    class="w-5 h-5 text-text-secondary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  required
+                  class="input pl-10"
+                  placeholder="usuario@universidad.edu.pe"
+                  autocomplete="username"
+                  aria-describedby="username-error"
+                />
+              </div>
+              <span
+                class="text-error text-sm mt-1 hidden"
+                id="username-error"
+                role="alert"
+              >
+                Por favor ingresa tu usuario o correo institucional
+              </span>
+            </div>
+
+            <!-- Password Field -->
+            <div>
+              <label
+                for="password"
+                class="block text-sm font-medium text-text-primary mb-2"
+              >
+                Contraseña *
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <svg
+                    class="w-5 h-5 text-text-secondary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  class="input pl-10 pr-10"
+                  placeholder="••••••••"
+                  autocomplete="current-password"
+                  aria-describedby="password-error"
+                />
+                <button
+                  type="button"
+                  id="toggle-password"
+                  class="absolute inset-y-0 right-0 pr-3 flex items-center text-text-secondary hover:text-primary transition-colors"
+                  aria-label="Mostrar contraseña"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    id="eye-icon"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-5 h-5 hidden"
+                    id="eye-off-icon"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <span
+                class="text-error text-sm mt-1 hidden"
+                id="password-error"
+                role="alert"
+              >
+                Por favor ingresa tu contraseña
+              </span>
+            </div>
+
+            <!-- Remember Me & Forgot Password -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  id="remember-me"
+                  name="remember-me"
+                  class="w-4 h-4 text-primary border-border rounded focus:ring-2 focus:ring-accent cursor-pointer"
+                />
+                <label
+                  for="remember-me"
+                  class="ml-2 text-sm text-text-secondary cursor-pointer"
+                >
+                  Recordarme
+                </label>
+              </div>
+              <a
+                href="javascript:void(0)"
+                id="forgot-password-link"
+                class="text-sm text-primary hover:text-primary-600 font-medium transition-colors"
+              >
+                ¿Olvidaste tu contraseña?
+              </a>
+            </div>
+
+            <!-- Error Alert -->
+            <div id="login-error" class="alert-error hidden" role="alert">
+              <svg
+                class="w-5 h-5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <div>
+                <h3 class="font-semibold">Error de Autenticación</h3>
+                <p class="text-sm" id="login-error-message">
+                  Usuario o contraseña incorrectos. Por favor, verifica tus
+                  credenciales.
+                </p>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              id="login-button"
+              class="btn-primary w-full justify-center text-lg py-3"
+            >
+              <span id="login-button-text">Iniciar Sesión</span>
+              <svg
+                class="w-5 h-5 ml-2"
+                id="login-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 ml-2 animate-spin hidden"
+                id="login-spinner"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Divider -->
+          <div class="relative my-8">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-border"></div>
+            </div>
+            <div class="relative flex justify-center text-sm">
+              <span class="px-4 bg-background text-text-secondary"
+                >¿No tienes una cuenta?</span
+              >
+            </div>
+          </div>
+
+          <!-- Registration Links -->
+          <div class="space-y-3">
+            <a
+              href="user_registration.html"
+              class="btn-outline w-full justify-center"
+            >
+              <svg
+                class="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+                ></path>
+              </svg>
+              Registrarse como Estudiante
+            </a>
+            <p class="text-center text-sm text-text-secondary">
+              ¿Eres autoridad de seguridad?
+              <a
+                href="javascript:void(0)"
+                id="authority-contact-link"
+                class="text-primary hover:text-primary-600 font-medium transition-colors"
+              >
+                Contacta al administrador
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Security Notice -->
+        <div class="mt-6 text-center">
+          <div
+            class="inline-flex items-center gap-2 text-sm text-text-secondary"
+          >
+            <svg
+              class="w-4 h-4 text-success"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span>Conexión segura protegida con cifrado SSL</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Forgot Password Modal -->
+    <div
+      id="forgot-password-modal"
+      class="fixed inset-0 bg-text-primary bg-opacity-50 hidden items-center justify-center z-50 p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="card-elevated max-w-md w-full p-8 relative">
+        <!-- Close Button -->
+        <button
+          type="button"
+          id="close-modal"
+          class="absolute top-4 right-4 text-text-secondary hover:text-text-primary transition-colors"
+          aria-label="Cerrar modal"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Modal Header -->
+        <div class="text-center mb-6">
+          <div
+            class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-accent"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
+              ></path>
+            </svg>
+          </div>
+          <h2
+            id="modal-title"
+            class="text-2xl font-heading font-bold text-text-primary mb-2"
+          >
+            Recuperar Contraseña
+          </h2>
+          <p class="text-text-secondary">
+            Ingresa tu correo institucional y te enviaremos instrucciones para
+            restablecer tu contraseña
+          </p>
+        </div>
+
+        <!-- Reset Form -->
+        <form id="reset-form" class="space-y-6">
+          <div>
+            <label
+              for="reset-email"
+              class="block text-sm font-medium text-text-primary mb-2"
+            >
+              Correo Institucional *
+            </label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+              >
+                <svg
+                  class="w-5 h-5 text-text-secondary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="email"
+                id="reset-email"
+                name="reset-email"
+                required
+                class="input pl-10"
+                placeholder="usuario@universidad.edu.pe"
+                aria-describedby="reset-email-error"
+              />
+            </div>
+            <span
+              class="text-error text-sm mt-1 hidden"
+              id="reset-email-error"
+              role="alert"
+            >
+              Por favor ingresa un correo institucional válido
+            </span>
+          </div>
+
+          <!-- Success Message -->
+          <div id="reset-success" class="alert-success hidden" role="alert">
+            <svg
+              class="w-5 h-5 flex-shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <div>
+              <h3 class="font-semibold">Correo Enviado</h3>
+              <p class="text-sm">
+                Revisa tu bandeja de entrada para continuar con el proceso de
+                recuperación.
+              </p>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            id="reset-button"
+            class="btn-accent w-full justify-center"
+          >
+            <span id="reset-button-text">Enviar Instrucciones</span>
+            <svg
+              class="w-5 h-5 ml-2 hidden"
+              id="reset-spinner"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4"
+              ></circle>
+              <path
+                class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              ></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/auth.js"></script>
+  </body>
+</html>
