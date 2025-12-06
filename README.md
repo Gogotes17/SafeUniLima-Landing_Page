@@ -76,5 +76,5 @@ The app is built with responsive design using Tailwind CSS breakpoints:
 
 ## 🙏 Acknowledgments
 
-- Powered by HTML and Tailwind CSS
+
 
